@@ -2,8 +2,11 @@ package com.test.introduceapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet.Constraint
 import androidx.core.content.res.ResourcesCompat
 
 class HomeActivity : AppCompatActivity() {
@@ -13,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
 
         val idText = findViewById<TextView>(R.id.userId)
         val nameText = findViewById<TextView>(R.id.userName)
-        val finishBtn = findViewById<TextView>(R.id.finish)
+        val finishBtn = findViewById<ConstraintLayout>(R.id.finish)
         val image = findViewById<ImageView>(R.id.main_image)
 
         if (intent.hasExtra("id")){

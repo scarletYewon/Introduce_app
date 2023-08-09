@@ -21,7 +21,7 @@
     <LinearLayout
         android:id="@+id/idPw"
         app:layout_constraintTop_toBottomOf="@id/main_image"
-        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintBottom_toTopOf="@id/finish"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="50dp"
@@ -59,30 +59,44 @@
             android:padding="10dp"
             android:text="이예원"/>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/buttons"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/finish"
         app:layout_constraintTop_toBottomOf="@id/idPw"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/finish"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:gravity="center"
-            android:background="@color/white"
+            android:src="@drawable/icon_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             android:text="종료"/>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

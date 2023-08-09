@@ -2,6 +2,7 @@ package com.test.introduceapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -21,7 +22,7 @@ class SignInActivity: AppCompatActivity() {
         val pwText = findViewById<EditText>(R.id.inputPw)
         val signInBtn = findViewById<TextView>(R.id.goSignIn)
         val signUpBtn = findViewById<TextView>(R.id.goSignUp)
-        var nameText = ""
+        var nameText = "예원"
         intentManager = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             if (it.resultCode== RESULT_OK){
                 val userId = it.data?.getStringExtra("id")?:""
